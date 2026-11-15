@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <PawnKindDef Name="ESCP_VampireKindBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionDef>ESCP_Faction_Volkihar</defaultFactionDef>
+        <xenotypeSet>
+            <xenotypeChances>
+                <ESCP_Xenotype_Nord MayRequire="Rick.ESCP.Nords">0.45</ESCP_Xenotype_Nord>
+                <ESCP_Xenotype_Imperial MayRequire="Rick.ESCP.Imperials">0.2</ESCP_Xenotype_Imperial>
+                <ESCP_Xenotype_Breton MayRequire="Rick.ESCP.Bretons">0.15</ESCP_Xenotype_Breton>
+                <ESCP_Xenotype_Dunmer MayRequire="Rick.ESCP.Dunmer">0.1</ESCP_Xenotype_Dunmer>
+                <ESCP_Xenotype_Redguard MayRequire="Rick.ESCP.Redguards">0.1</ESCP_Xenotype_Redguard>
+            </xenotypeChances>
+        </xenotypeSet>
+        <useFactionXenotypes>false</useFactionXenotypes>
+        <minGenerationAge>20</minGenerationAge>
+        <maxGenerationAge>60</maxGenerationAge>
+        <chemicalAddictionChance>0</chemicalAddictionChance>
+        <invNutrition>2</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <pawnGroupDevelopmentStage>Adult</pawnGroupDevelopmentStage>
+        <disallowedTraits>
+            <li>Kind</li>
+            <li>Wimp</li>
+        </disallowedTraits>
+        <backstoryFiltersOverride>
+            <li>
+                <categoriesChildhood>
+                    <li>ESCP_Backstory_Vampire_Child</li>
+                </categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>ESCP_Backstory_Vampire_Adult</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire_Thrall</defName>
+        <backstoryFiltersOverride Inherit="False">
+            <li>
+                <categoriesChildhood>
+                    <li>ESCP_Backstory_Vampire_Child</li>
+                </categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>ESCP_Backstory_Vampire_Thrall</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
+        <label>vampire thrall</label>
+        <combatPower>40</combatPower>
+        <isFighter>true</isFighter>
+        <itemQuality>Poor</itemQuality>
+        <gearHealthRange>0.4~1.0</gearHealthRange>
+        <apparelMoney>150~350</apparelMoney>
+        <apparelTags>
+            <li>MedievalBasic</li>
+            <li>MedievalMilitaryBasic</li>
+        </apparelTags>
+        <weaponMoney>100~300</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeBasic</li>
+            <li>MedievalRanged</li>
+        </weaponTags>
+        <initialWillRange>1~3</initialWillRange>
+        <initialResistanceRange>8~14</initialResistanceRange>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire_Fledgling</defName>
+        <label>fledgling vampire</label>
+        <combatPower>70</combatPower>
+        <isFighter>true</isFighter>
+        <itemQuality>Normal</itemQuality>
+        <apparelMoney>250~500</apparelMoney>
+        <apparelTags>
+            <li>MedievalBasic</li>
+            <li>MedievalMilitaryBasic</li>
+        </apparelTags>
+        <weaponMoney>200~400</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeBasic</li>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>6~10</range>
+            </li>
+        </skills>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>18~26</initialResistanceRange>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.PawnKindExtension_Vampire" />
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire</defName>
+        <label>vampire</label>
+        <combatPower>90</combatPower>
+        <isFighter>true</isFighter>
+        <itemQuality>Normal</itemQuality>
+        <apparelMoney>400~900</apparelMoney>
+        <apparelTags>
+            <li>MedievalBasic</li>
+            <li>MedievalMilitaryBasic</li>
+        </apparelTags>
+        <weaponMoney>300~700</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>8~14</range>
+            </li>
+            <li>
+                <skill>Intellectual</skill>
+                <range>5~10</range>
+            </li>
+        </skills>
+        <initialWillRange>4~6</initialWillRange>
+        <initialResistanceRange>25~35</initialResistanceRange>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.PawnKindExtension_Vampire" />
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire_Elder</defName>
+        <label>vampire elder</label>
+        <combatPower>130</combatPower>
+        <isFighter>true</isFighter>
+        <minGenerationAge>30</minGenerationAge>
+        <itemQuality>Good</itemQuality>
+        <apparelMoney>800~1400</apparelMoney>
+        <apparelTags>
+            <li>MedievalMilitaryAdvanced</li>
+        </apparelTags>
+        <weaponMoney>500~900</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>10~16</range>
+            </li>
+            <li>
+                <skill>Intellectual</skill>
+                <range>8~14</range>
+            </li>
+        </skills>
+        <initialWillRange>6~9</initialWillRange>
+        <initialResistanceRange>35~50</initialResistanceRange>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.PawnKindExtension_Vampire" />
+            <li Class="ESCP.Core.Magic.PawnKindExtension_Spellcaster">
+                <spells>
+                    <li>ESCP_Spell_Fear</li>
+                </spells>
+                <randomSpells>
+                    <li>ESCP_Spell_IceSpike</li>
+                    <li>ESCP_Spell_Paralyze</li>
+                    <li>ESCP_Spell_Invisibility</li>
+                </randomSpells>
+                <randomCount>1~1</randomCount>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire_Lord</defName>
+        <label>Volkihar lord</label>
+        <combatPower>200</combatPower>
+        <isFighter>true</isFighter>
+        <factionLeader>true</factionLeader>
+        <minGenerationAge>40</minGenerationAge>
+        <itemQuality>Excellent</itemQuality>
+        <apparelMoney>1500~2500</apparelMoney>
+        <apparelTags>
+            <li>MedievalMilitaryAdvanced</li>
+        </apparelTags>
+        <weaponMoney>900~1500</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>14~18</range>
+            </li>
+            <li>
+                <skill>Intellectual</skill>
+                <range>10~16</range>
+            </li>
+            <li>
+                <skill>Social</skill>
+                <range>8~14</range>
+            </li>
+        </skills>
+        <initialWillRange>8~12</initialWillRange>
+        <initialResistanceRange>50~70</initialResistanceRange>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.PawnKindExtension_Vampire" />
+            <li Class="ESCP.Core.Magic.PawnKindExtension_Spellcaster">
+                <spells>
+                    <li>ESCP_Spell_Fear</li>
+                    <li>ESCP_Spell_Paralyze</li>
+                    <li>ESCP_Spell_ConjureWolf</li>
+                </spells>
+                <randomSpells>
+                    <li>ESCP_Spell_IceSpike</li>
+                    <li>ESCP_Spell_Invisibility</li>
+                </randomSpells>
+                <randomCount>1~1</randomCount>
+            </li>
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire_Colonist</defName>
+        <label>vampire</label>
+        <defaultFactionDef>ESCP_Faction_Volkihar_Player</defaultFactionDef>
+        <combatPower>90</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <apparelMoney>300~600</apparelMoney>
+        <apparelTags>
+            <li>MedievalBasic</li>
+        </apparelTags>
+        <weaponMoney>200~400</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>20~30</initialResistanceRange>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.PawnKindExtension_Vampire" />
+        </modExtensions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ESCP_VampireKindBase">
+        <defName>ESCP_Pawnkind_Vampire_ThrallColonist</defName>
+        <backstoryFiltersOverride Inherit="False">
+            <li>
+                <categoriesChildhood>
+                    <li>ESCP_Backstory_Vampire_Child</li>
+                </categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>ESCP_Backstory_Vampire_Thrall</li>
+                </categoriesAdulthood>
+            </li>
+        </backstoryFiltersOverride>
+        <label>thrall</label>
+        <defaultFactionDef>ESCP_Faction_Volkihar_Player</defaultFactionDef>
+        <combatPower>40</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <apparelMoney>150~300</apparelMoney>
+        <apparelTags>
+            <li>MedievalBasic</li>
+        </apparelTags>
+        <weaponMoney>100~200</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <initialWillRange>1~3</initialWillRange>
+        <initialResistanceRange>8~14</initialResistanceRange>
+    </PawnKindDef>
+
+</Defs>

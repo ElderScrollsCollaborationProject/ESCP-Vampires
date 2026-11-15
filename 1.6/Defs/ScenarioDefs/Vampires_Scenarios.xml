@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ScenarioDef>
+        <defName>ESCP_Scenario_VolkiharExiles</defName>
+        <label>Volkihar Exiles</label>
+        <description>Two vampires turned on the Volkihar Lord and fled the castle with the mortal thralls who would still follow them. The clan wants them back, or wants them dead. They have a little silver, a few blades, and a long night ahead.</description>
+        <scenario>
+            <summary>Two vampires and two mortal thralls on the run from the Volkihar Clan.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>ESCP_Faction_Volkihar_Player</factionDef>
+            </playerFaction>
+            <surfaceLayer>
+                <def>SurfaceLayerFixed</def>
+                <tag>Surface</tag>
+                <layer>Surface</layer>
+                <settingsDef>Surface</settingsDef>
+                <hide>true</hide>
+                <connections>
+                    <Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+                        <zoomMode>ZoomOut</zoomMode>
+                    </Orbit>
+                </connections>
+            </surfaceLayer>
+            <parts>
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+                    <def>ConfigurePawnsKindDefs</def>
+                    <pawnChoiceCount>8</pawnChoiceCount>
+                    <leftBehindPawnKind>ESCP_Pawnkind_Vampire_ThrallColonist</leftBehindPawnKind>
+                    <kindCounts>
+                        <li>
+                            <kindDef>ESCP_Pawnkind_Vampire_Colonist</kindDef>
+                            <count>2</count>
+                            <requiredAtStart>true</requiredAtStart>
+                        </li>
+                        <li>
+                            <kindDef>ESCP_Pawnkind_Vampire_ThrallColonist</kindDef>
+                            <count>2</count>
+                        </li>
+                    </kindCounts>
+                </li>
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>Standing</method>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Silver</thingDef>
+                    <count>300</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Pemmican</thingDef>
+                    <count>80</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MedicineHerbal</thingDef>
+                    <count>15</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>200</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_LongSword</thingDef>
+                    <stuff>Steel</stuff>
+                    <count>1</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>ESCP_SoulGem_Black</thingDef>
+                    <count>1</count>
+                </li>
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>You slipped out of Castle Volkihar while the Lord fed. Your thralls carried what they could, and you ran until the sky started to grey.\n\nThe sun will burn you, so get a roof up before morning. Feed on sleepers and prisoners, not on your own, and watch the dark. The clan does not forget a betrayal.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+
+</Defs>

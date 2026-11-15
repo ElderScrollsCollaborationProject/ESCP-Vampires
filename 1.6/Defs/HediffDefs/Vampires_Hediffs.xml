@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HediffDef>
+        <defName>ESCP_Hediff_SanguinareVampiris</defName>
+        <label>sanguinare vampiris</label>
+        <description>A blood disease passed by a vampire's bite. If the body does not throw it off within a few days, the victim becomes a vampire. Good tending buys time for the immune system to win.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+        <isBad>true</isBad>
+        <makesSickThought>true</makesSickThought>
+        <tendable>true</tendable>
+        <initialSeverity>0.05</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <baseTendDurationHours>16</baseTendDurationHours>
+                <severityPerDayTended>-0.12</severityPerDayTended>
+            </li>
+            <li Class="HediffCompProperties_Immunizable">
+                <severityPerDayNotImmune>0.3</severityPerDayNotImmune>
+                <immunityPerDaySick>0.28</immunityPerDaySick>
+                <severityPerDayImmune>-0.6</severityPerDayImmune>
+            </li>
+            <li Class="ESCP.Core.Vampires.HediffCompProperties_TurnVampire" />
+        </comps>
+        <stages>
+            <li>
+                <label>minor</label>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+                <label>advanced</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>ESCP_Hediff_Vampirism</defName>
+        <label>vampirism</label>
+        <description>This person is a vampire. The longer they go without feeding, the stronger and faster they get, and the less they can stand the sun. Fed vampires can pass for mortal. Starved ones can't, and direct daylight will burn them. Sunlight is always unpleasant.</description>
+        <hediffClass>ESCP.Core.Vampires.Hediff_Vampirism</hediffClass>
+        <defaultLabelColor>(0.75, 0.1, 0.2)</defaultLabelColor>
+        <isBad>false</isBad>
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>0.01</initialSeverity>
+        <minSeverity>0.01</minSeverity>
+        <maxSeverity>1</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>0.1</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>fed</label>
+                <statOffsets>
+                    <ToxicResistance>0.25</ToxicResistance>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.25</minSeverity>
+                <label>thirsty</label>
+                <statOffsets>
+                    <ToxicResistance>0.5</ToxicResistance>
+                    <MeleeDodgeChance>4</MeleeDodgeChance>
+                    <MoveSpeed>0.3</MoveSpeed>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+                <label>starving</label>
+                <socialFightChanceFactor>2</socialFightChanceFactor>
+                <statOffsets>
+                    <ToxicResistance>0.75</ToxicResistance>
+                    <MeleeDodgeChance>8</MeleeDodgeChance>
+                    <MoveSpeed>0.6</MoveSpeed>
+                    <SocialImpact>-0.25</SocialImpact>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.75</minSeverity>
+                <label>ravenous</label>
+                <socialFightChanceFactor>4</socialFightChanceFactor>
+                <statOffsets>
+                    <ToxicResistance>1</ToxicResistance>
+                    <MeleeDodgeChance>14</MeleeDodgeChance>
+                    <MoveSpeed>1</MoveSpeed>
+                    <SocialImpact>-0.5</SocialImpact>
+                </statOffsets>
+                <painFactor>0.5</painFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>ESCP_Hediff_Sunlight</defName>
+        <label>sun-sick</label>
+        <description>Daylight is making this vampire weak and slow. Getting under a roof will clear it up.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9, 0.7, 0.3)</defaultLabelColor>
+        <isBad>true</isBad>
+        <maxSeverity>1</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-8</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

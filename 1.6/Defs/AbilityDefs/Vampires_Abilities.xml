@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_VampireFeed</defName>
+        <label>feed</label>
+        <description>Drink from someone who can't fight back: a sleeping person, a downed one, or a prisoner. Resets the vampire's thirst, costs the victim a good deal of blood, and sometimes passes on the disease.</description>
+        <iconPath>UI/Abilities/EntropyDump</iconPath>
+        <hostile>false</hostile>
+        <aiCanUse>false</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>1.9</range>
+            <warmupTime>4</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Vampires.CompProperties_AbilityFeed" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_VampiricDrain</defName>
+        <label>vampiric drain</label>
+        <description>Pulls the life out of a target at range and uses it to mend the vampire's own wounds.</description>
+        <iconPath>UI/Abilities/Berserk</iconPath>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>14</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>20</cost></li>
+            <li Class="ESCP.Core.Vampires.CompProperties_AbilityDrain"><damage>12</damage></li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_VampireTurn</defName>
+        <label>turn</label>
+        <description>Feed on someone who is asleep and give them the vampire's blood in return. They do not wake, and they get up a vampire.</description>
+        <iconPath>UI/Abilities/EntropyDump</iconPath>
+        <hostile>false</hostile>
+        <aiCanUse>false</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>1.9</range>
+            <warmupTime>4</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Vampires.CompProperties_AbilityTurn" />
+        </comps>
+    </AbilityDef>
+
+</Defs>

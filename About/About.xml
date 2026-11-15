@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <packageId>Rick.ESCP.Vampires</packageId>
+    <author>Rick</author>
+    <name>ESCP - Vampires</name>
+    <description>The Elder Scrolls Collaboration Project Presents: Vampires. A coven that hunts at night, sanguinare vampiris passed by the bite, thirst that grows stronger the longer it goes unfed, trouble with sunlight, and a ritual cure that takes a filled black soul gem.</description>
+    <url>https://github.com/ElderScrollsCollaborationProject</url>
+    <supportedVersions>
+        <li>1.6</li>
+        <li>1.7</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>Rick.ESCP.Core.Tools</packageId>
+            <displayName>ESCP - Tools</displayName>
+            <downloadUrl>https://github.com/ElderScrollsCollaborationProject</downloadUrl>
+        </li>
+        <li>
+            <packageId>Ludeon.RimWorld.Biotech</packageId>
+            <displayName>Biotech</displayName>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Rick.ESCP.Core.Tools</li>
+        <li>Rick.ESCP.Nords</li>
+        <li>Rick.ESCP.Imperials</li>
+        <li>Rick.ESCP.Bretons</li>
+        <li>Rick.ESCP.Dunmer</li>
+        <li>Rick.ESCP.Redguards</li>
+    </loadAfter>
+
+</ModMetaData>

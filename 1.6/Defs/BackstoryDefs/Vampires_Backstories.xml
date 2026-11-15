@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireChild_Haafingar_Fisher</defName>
+        <title>Haafingar fisher's child</title>
+        <titleShort>fisher</titleShort>
+        <description>[PAWN_nameDef] grew up hauling nets on the frozen coast below Solitude. [PAWN_possessive] family whispered about the old castle out in the Sea of Ghosts and told [PAWN_objective] never to row toward it.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Child</li>
+        </spawnCategories>
+        <skillGains>
+            <Animals>2</Animals>
+            <Cooking>2</Cooking>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireChild_Riften_Orphan</defName>
+        <title>Honorhall orphan</title>
+        <titleShort>orphan</titleShort>
+        <description>[PAWN_nameDef] spent [PAWN_possessive] early years in the Honorhall Orphanage in Riften, learning to steal bread and keep quiet. [PAWN_pronoun] slipped away one night and never went back.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Child</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>2</Social>
+            <Melee>2</Melee>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireChild_Bruma_Shepherd</defName>
+        <title>Bruma shepherd</title>
+        <titleShort>shepherd</titleShort>
+        <description>[PAWN_nameDef] herded goats in the Jerall Mountains above Bruma. Long nights alone on the slopes taught [PAWN_objective] patience and a healthy fear of what moves in the dark.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Child</li>
+        </spawnCategories>
+        <skillGains>
+            <Animals>3</Animals>
+            <Plants>1</Plants>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireChild_Temple_Acolyte</defName>
+        <title>temple acolyte</title>
+        <titleShort>acolyte</titleShort>
+        <description>As a child, [PAWN_nameDef] swept the halls of a temple to Arkay and learned the rites for the dead. [PAWN_pronoun] can still recite them, though [PAWN_pronoun] no longer finds any comfort in them.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Child</li>
+        </spawnCategories>
+        <skillGains>
+            <Intellectual>2</Intellectual>
+            <Medicine>2</Medicine>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireChild_Noble_Ward</defName>
+        <title>noble's ward</title>
+        <titleShort>ward</titleShort>
+        <description>[PAWN_nameDef] was raised as the ward of a minor Colovian noble, taught letters, manners and swordplay. [PAWN_pronoun] learned early how to please powerful people.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Child</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>3</Social>
+            <Melee>1</Melee>
+        </skillGains>
+        <workDisables>
+            <li>ManualDumb</li>
+        </workDisables>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireChild_Miner_Child</defName>
+        <title>Karthwasten miner's child</title>
+        <titleShort>miner</titleShort>
+        <description>[PAWN_nameDef] grew up in the silver mines of the Reach, where the tunnels were dark and the Forsworn were never far away. [PAWN_pronoun] can see in poor light better than most.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Child</li>
+        </spawnCategories>
+        <skillGains>
+            <Mining>3</Mining>
+            <Construction>1</Construction>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Volkihar_Courtier</defName>
+        <title>Volkihar courtier</title>
+        <titleShort>courtier</titleShort>
+        <description>[PAWN_nameDef] spent decades at the feasting table of Castle Volkihar, trading favors and venom with the other vampires of the court. [PAWN_pronoun] knows how to flatter a lord and how to ruin one.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>6</Social>
+            <Intellectual>3</Intellectual>
+        </skillGains>
+        <workDisables>
+            <li>ManualDumb</li>
+        </workDisables>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Volkihar_Enforcer</defName>
+        <title>clan enforcer</title>
+        <titleShort>enforcer</titleShort>
+        <description>[PAWN_nameDef] dealt with the Volkihar's problems: debtors, deserters and Dawnguard scouts who got too close. [PAWN_pronoun] rarely needed to be told twice.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>7</Melee>
+            <Shooting>2</Shooting>
+        </skillGains>
+        <workDisables>
+            <li>Caring</li>
+        </workDisables>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Fledgling</defName>
+        <title>blood-starved fledgling</title>
+        <titleShort>fledgling</titleShort>
+        <description>[PAWN_nameDef] was turned only a few years ago and has never fully mastered the thirst. [PAWN_pronoun] still remembers sunlight, and still wakes some evenings expecting to see it.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>4</Melee>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Molag_Devotee</defName>
+        <title>devotee of Molag Bal</title>
+        <titleShort>devotee</titleShort>
+        <description>[PAWN_nameDef] sought out Molag Bal willingly and paid for the gift in blood. [PAWN_pronoun] speaks of Coldharbour the way other people speak of home.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Intellectual>4</Intellectual>
+            <Social>3</Social>
+        </skillGains>
+        <workDisables>
+            <li>Caring</li>
+        </workDisables>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Turned_Vigilant</defName>
+        <title>fallen Vigilant</title>
+        <titleShort>Vigilant</titleShort>
+        <description>[PAWN_nameDef] once hunted daedra worshippers as a Vigilant of Stendarr. A vampire got to [PAWN_objective] first. [PAWN_pronoun] knows every ward and every trick [PAWN_possessive] old order uses.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>5</Melee>
+            <Medicine>3</Medicine>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Cave_Feral</defName>
+        <title>cave-dweller</title>
+        <titleShort>feral</titleShort>
+        <description>[PAWN_nameDef] lived for years in a cave with a pack of feral vampires, feeding on whatever wandered in. [PAWN_pronoun] has forgotten most of what [PAWN_pronoun] knew about polite company.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>6</Melee>
+            <Animals>2</Animals>
+        </skillGains>
+        <workDisables>
+            <li>Social</li>
+            <li>Artistic</li>
+        </workDisables>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Blood_Scholar</defName>
+        <title>blood scholar</title>
+        <titleShort>scholar</titleShort>
+        <description>[PAWN_nameDef] has spent a long unlife studying the nature of vampirism, chasing rumors of Vampire Lords and the cure alike. [PAWN_possessive] notes fill whole chests.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Intellectual>7</Intellectual>
+            <Medicine>2</Medicine>
+        </skillGains>
+        <workDisables>
+            <li>ManualDumb</li>
+        </workDisables>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Night_Bard</defName>
+        <title>night bard</title>
+        <titleShort>bard</titleShort>
+        <description>[PAWN_nameDef] performed in taverns across Skyrim, always after dark. Audiences loved [PAWN_objective], though a few of them were never quite the same afterward.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Artistic>5</Artistic>
+            <Social>4</Social>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Castle_Steward</defName>
+        <title>castle steward</title>
+        <titleShort>steward</titleShort>
+        <description>[PAWN_nameDef] kept the halls of a vampire stronghold running: the thralls fed, the cattle penned and the lord's guests seated in order of rank.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>3</Social>
+            <Construction>2</Construction>
+            <Cooking>2</Cooking>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Vampire_Vampire_Hunter_Turned</defName>
+        <title>turned Dawnguard</title>
+        <titleShort>Dawnguard</titleShort>
+        <description>[PAWN_nameDef] rode with the Dawnguard until a hunt went wrong. Now [PAWN_pronoun] knows exactly what [PAWN_possessive] old comrades will do when they find [PAWN_objective].</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Adult</li>
+        </spawnCategories>
+        <skillGains>
+            <Shooting>5</Shooting>
+            <Melee>3</Melee>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireThrall_Blood_Cattle</defName>
+        <title>blood cattle</title>
+        <titleShort>cattle</titleShort>
+        <description>[PAWN_nameDef] was kept in the pens beneath a vampire stronghold and bled whenever the lord was thirsty. Most of [PAWN_possessive] will has been worn away.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Thrall</li>
+        </spawnCategories>
+        <skillGains>
+            <Cooking>2</Cooking>
+            <Plants>2</Plants>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireThrall_Thrall_Servant</defName>
+        <title>household thrall</title>
+        <titleShort>thrall</titleShort>
+        <description>[PAWN_nameDef] served a vampire household by day, guarding the coffins and running errands in the sunlight that [PAWN_possessive] masters could not.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Thrall</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>3</Melee>
+            <Social>2</Social>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireThrall_Thrall_Guard</defName>
+        <title>thrall guard</title>
+        <titleShort>guard</titleShort>
+        <description>[PAWN_nameDef] stood watch over a vampire lair while [PAWN_possessive] masters slept. [PAWN_pronoun] would die for them without a second thought.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Thrall</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>5</Melee>
+            <Shooting>2</Shooting>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireThrall_Willing_Servant</defName>
+        <title>willing servant</title>
+        <titleShort>servant</titleShort>
+        <description>[PAWN_nameDef] offered [PAWN_objective]self to the Volkihar in hopes of being turned someday. So far [PAWN_pronoun] has only been fed upon.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Thrall</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>3</Social>
+            <Cooking>2</Cooking>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_VampireThrall_Grave_Digger</defName>
+        <title>grave digger</title>
+        <titleShort>digger</titleShort>
+        <description>[PAWN_nameDef] dug graves for a vampire coven and filled them too. The work never bothered [PAWN_objective] as much as it should have.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>ESCP_Backstory_Vampire_Thrall</li>
+        </spawnCategories>
+        <skillGains>
+            <Mining>3</Mining>
+            <Construction>2</Construction>
+        </skillGains>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+</Defs>

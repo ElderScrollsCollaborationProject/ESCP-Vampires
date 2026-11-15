@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>ESCP_CureVampirism</defName>
+        <label>perform the cure ritual</label>
+        <description>An old ritual that burns the vampirism out of a willing patient. It needs a filled black soul gem, and it doesn't always work.</description>
+        <workerClass>Recipe_RemoveHediff</workerClass>
+        <jobString>performing the cure ritual on TargetA.</jobString>
+        <workAmount>4500</workAmount>
+        <targetsBodyPart>false</targetsBodyPart>
+        <removesHediff>ESCP_Hediff_Vampirism</removesHediff>
+        <successfullyRemovedHediffMessage>{0} has cured {1} of vampirism.</successfullyRemovedHediffMessage>
+        <deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+        <skillRequirements>
+            <Medicine>8</Medicine>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_SoulGem_Black_Filled</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter Inherit="False">
+            <thingDefs>
+                <li>ESCP_SoulGem_Black_Filled</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>ESCP_Thought_FedUpon</defName>
+        <durationDays>6</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>a vampire fed on me</label>
+                <description>I can still feel it. I don't want to talk about it.</description>
+                <baseMoodEffect>-12</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

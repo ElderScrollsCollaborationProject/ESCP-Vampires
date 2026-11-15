@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>ESCP_Faction_Volkihar</defName>
+        <label>Volkihar Clan</label>
+        <description>The Volkihar are one of the oldest vampire clans in Tamriel. From their ice-locked castles they serve Molag Bal, the Daedric Prince who made the first vampire, and they treat mortals as cattle to be farmed, bled and bound. They do not trade and they do not make peace. They come at night, often with mortal thralls marching ahead of them, and anyone they bite risks waking up as one of them.</description>
+        <colorSpectrum>
+            <li>(0.45, 0.04, 0.12)</li>
+            <li>(0.25, 0.02, 0.08)</li>
+        </colorSpectrum>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>60</configurationListOrderPriority>
+        <pawnSingular>vampire</pawnSingular>
+        <pawnsPlural>vampires</pawnsPlural>
+        <categoryTag>Outlander</categoryTag>
+        <settlementGenerationWeight>0.15</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <permanentEnemy>true</permanentEnemy>
+        <canSiege>false</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <leaderTitle>Vampire Lord</leaderTitle>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <techLevel>Medieval</techLevel>
+        <fixedName>Volkihar Clan</fixedName>
+        <allowedCultures>
+            <li>ESCP_Culture_Nord</li>
+        </allowedCultures>
+
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>The Covenant of Coldharbour</ideoName>
+        <ideoDescription>Molag Bal made the first vampire to spite Arkay and the cycle of life and death. The Volkihar take that as a charter. Mortals exist to feed them, the strong exist to rule the weak, and the sun is the only thing in Nirn that they still fear.</ideoDescription>
+        <deityPresets>
+            <li>
+                <nameType><name>Molag Bal</name><type>Daedric Prince of domination and father of vampires</type></nameType>
+                <gender>Male</gender>
+                <iconPath>UI/Deities/ESCP_DeityMolagBal</iconPath>
+            </li>
+        </deityPresets>
+        <styles>
+            <li>ESCP_Style_Nord</li>
+        </styles>
+        <forcedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+        </forcedMemes>
+        <requiredPreceptsOnly>true</requiredPreceptsOnly>
+
+        <xenotypeSet>
+            <xenotypeChances>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+                <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+                <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+                <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+            </xenotypeChances>
+        </xenotypeSet>
+
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>ESCP_Backstory_Vampire_Child</li>
+                    <li>ESCP_Backstory_Vampire_Adult</li>
+                    <li>ESCP_Backstory_Vampire_Thrall</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+
+        <allowedArrivalTemperatureRange>-60~35</allowedArrivalTemperatureRange>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0, 35)</li>
+                <li>(70, 50)</li>
+                <li>(250, 90)</li>
+                <li>(700, 130)</li>
+                <li>(1300, 200)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <options>
+                    <ESCP_Pawnkind_Vampire_Thrall>8</ESCP_Pawnkind_Vampire_Thrall>
+                    <ESCP_Pawnkind_Vampire_Fledgling>8</ESCP_Pawnkind_Vampire_Fledgling>
+                    <ESCP_Pawnkind_Vampire>10</ESCP_Pawnkind_Vampire>
+                    <ESCP_Pawnkind_Vampire_Elder>3</ESCP_Pawnkind_Vampire_Elder>
+                    <ESCP_Pawnkind_Vampire_Lord>1</ESCP_Pawnkind_Vampire_Lord>
+                </options>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <ESCP_Pawnkind_Vampire_Thrall>10</ESCP_Pawnkind_Vampire_Thrall>
+                    <ESCP_Pawnkind_Vampire_Fledgling>6</ESCP_Pawnkind_Vampire_Fledgling>
+                    <ESCP_Pawnkind_Vampire>10</ESCP_Pawnkind_Vampire>
+                    <ESCP_Pawnkind_Vampire_Elder>4</ESCP_Pawnkind_Vampire_Elder>
+                    <ESCP_Pawnkind_Vampire_Lord>2</ESCP_Pawnkind_Vampire_Lord>
+                </options>
+            </li>
+        </pawnGroupMakers>
+
+        <modExtensions>
+            <li Class="ESCP.Factions.FactionExtension_NightRaidsOnly" />
+            <li Class="ESCP.Factions.FactionExtension_BannedArrivalModes">
+                <arrivalModes>
+                    <li>EdgeDrop</li>
+                    <li>EdgeDropGroups</li>
+                    <li>CenterDrop</li>
+                    <li>RandomDrop</li>
+                </arrivalModes>
+            </li>
+            <li Class="ESCP.Factions.FactionExtension_NamedSettlement">
+                <settlementNames>
+                    <li>Castle Volkihar</li>
+                    <li>Bloodlet Throne</li>
+                    <li>Movarth's Lair</li>
+                    <li>Haemar's Shame</li>
+                    <li>Redwater Den</li>
+                    <li>Fellglow Keep</li>
+                </settlementNames>
+                <preferredHilliness />
+                <allowedBiomes>
+                    <li>Tundra</li>
+                    <li>BorealForest</li>
+                    <li>ColdBog</li>
+                    <li>IceSheet</li>
+                </allowedBiomes>
+                <clustered>false</clustered>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <FactionDef ParentName="PlayerFactionBase">
+        <defName>ESCP_Faction_Volkihar_Player</defName>
+        <label>Volkihar exiles</label>
+        <description>A few vampires who broke with the Volkihar and fled with the mortal thralls still loyal to them. They need blood, shelter from the sun and somewhere the clan will not think to look.</description>
+        <isPlayer>true</isPlayer>
+        <techLevel>Medieval</techLevel>
+        <basicMemberKind>ESCP_Pawnkind_Vampire_ThrallColonist</basicMemberKind>
+        <pawnSingular>exile</pawnSingular>
+        <pawnsPlural>exiles</pawnsPlural>
+        <leaderTitle>Lord</leaderTitle>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <colorSpectrum>
+            <li>(0.55, 0.08, 0.15)</li>
+        </colorSpectrum>
+        <allowedCultures>
+            <li>ESCP_Culture_Nord</li>
+        </allowedCultures>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>ESCP_Backstory_Vampire_Child</li>
+                    <li>ESCP_Backstory_Vampire_Adult</li>
+                    <li>ESCP_Backstory_Vampire_Thrall</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+    </FactionDef>
+
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <IncidentDef>
+        <defName>ESCP_Incident_VampireAmbush</defName>
+        <label>vampire ambush</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Core.Vampires.IncidentWorker_VampireAmbush</workerClass>
+        <letterLabel>Vampires</letterLabel>
+        <letterText>Figures are coming out of the dark. They don't carry torches and they don't seem to feel the cold. Be careful in melee: a bite can pass on the disease.</letterText>
+        <letterDef>ThreatBig</letterDef>
+        <baseChance>0.5</baseChance>
+        <minRefireDays>30</minRefireDays>
+        <earliestDay>20</earliestDay>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
+</Defs>

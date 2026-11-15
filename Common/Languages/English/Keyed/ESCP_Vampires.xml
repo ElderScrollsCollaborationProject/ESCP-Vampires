@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <ESCP_Vampire_TurnedLabel>{0} is a vampire</ESCP_Vampire_TurnedLabel>
+    <ESCP_Vampire_TurnedText>The disease has run its course, and {0} has become a vampire.
+
+They will need to feed on sleeping or helpless people to keep the thirst down, and daylight will hurt them. A filled black soul gem can be used in a ritual to cure them.</ESCP_Vampire_TurnedText>
+    <ESCP_Vampire_CannotFeed>Can only feed on a person who is asleep, downed, or a prisoner.</ESCP_Vampire_CannotFeed>
+    <ESCP_Vampire_CannotTurn>Can only turn a person who is asleep.</ESCP_Vampire_CannotTurn>
+    <ESCP_Vampire_DrainedDead>{0} drained {1} dry in their sleep.</ESCP_Vampire_DrainedDead>
+
+</LanguageData>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JobDef>
+        <defName>ESCP_Job_BloodFrenzy</defName>
+        <driverClass>ESCP.Core.Vampires.JobDriver_BloodFrenzy</driverClass>
+        <reportString>feeding on TargetA.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_VampireFeed</defName>
+        <driverClass>ESCP.Core.Vampires.JobDriver_VampireFeed</driverClass>
+        <reportString>feeding on TargetA.</reportString>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.JobExtension_VampireFeed">
+                <thirstToFeed>0.25</thirstToFeed>
+                <bloodLoss>0.2</bloodLoss>
+                <feedTicks>240</feedTicks>
+            </li>
+        </modExtensions>
+    </JobDef>
+
+</Defs>

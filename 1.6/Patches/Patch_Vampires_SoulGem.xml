@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ESCP_SoulGem_Black_Filled"]/description</xpath>
+        <value>
+            <description>A black soul gem with a human soul inside. It is warm to the touch, and nobody likes to hold it for long. Spend it to put 200 charges back into an enchanted weapon, or use it in the ritual that cures vampirism.</description>
+        </value>
+    </Operation>
+
+</Patch>

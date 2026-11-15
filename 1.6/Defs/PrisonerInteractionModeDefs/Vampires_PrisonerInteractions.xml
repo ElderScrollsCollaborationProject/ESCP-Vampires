@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <PrisonerInteractionModeDef>
+        <defName>ESCP_PrisonerMode_VampireFeed</defName>
+        <label>vampire feeding</label>
+        <listOrder>26</listOrder>
+        <description>When a vampire in the colony grows thirsty, they may feed on this prisoner, asleep or awake. They stop short of a bite that would kill.</description>
+        <mustBeAwake>false</mustBeAwake>
+        <isNonExclusiveInteraction>true</isNonExclusiveInteraction>
+    </PrisonerInteractionModeDef>
+
+</Defs>

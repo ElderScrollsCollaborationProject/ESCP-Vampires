@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <MentalBreakDef>
+        <defName>ESCP_MentalBreak_BloodFrenzy_Major</defName>
+        <workerClass>ESCP.Core.Vampires.MentalBreakWorker_BloodFrenzy</workerClass>
+        <mentalState>ESCP_MentalState_BloodFrenzy</mentalState>
+        <baseCommonality>1</baseCommonality>
+        <intensity>Major</intensity>
+    </MentalBreakDef>
+
+    <MentalBreakDef>
+        <defName>ESCP_MentalBreak_BloodFrenzy_Extreme</defName>
+        <workerClass>ESCP.Core.Vampires.MentalBreakWorker_BloodFrenzy</workerClass>
+        <mentalState>ESCP_MentalState_BloodFrenzy</mentalState>
+        <baseCommonality>1</baseCommonality>
+        <intensity>Extreme</intensity>
+    </MentalBreakDef>
+
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>ESCP_MentalState_BloodFrenzy</defName>
+        <label>blood frenzy</label>
+        <stateClass>MentalState</stateClass>
+        <category>Malicious</category>
+        <minTicksBeforeRecovery>15000</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>30000</maxTicksBeforeRecovery>
+        <blockNormalThoughts>true</blockNormalThoughts>
+        <nameColor>(0.75, 0.1, 0.2)</nameColor>
+        <moodRecoveryThought>Catharsis</moodRecoveryThought>
+        <beginLetterLabel>blood frenzy</beginLetterLabel>
+        <beginLetter>{0} has given in to the thirst and is going after the nearest person asleep.</beginLetter>
+        <beginLetterDef>ThreatSmall</beginLetterDef>
+        <recoveryMessage>{0} has come out of the blood frenzy.</recoveryMessage>
+        <baseInspectLine>Mental state: Blood frenzy</baseInspectLine>
+        <modExtensions>
+            <li Class="ESCP.Core.Vampires.MentalStateExtension_BloodFrenzy">
+                <turnChance>0.5</turnChance>
+                <feedTicks>240</feedTicks>
+            </li>
+        </modExtensions>
+    </MentalStateDef>
+
+</Defs>

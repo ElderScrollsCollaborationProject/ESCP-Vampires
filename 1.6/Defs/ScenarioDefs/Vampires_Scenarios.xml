@@ -77,7 +77,7 @@
                 </li>
                 <li Class="ScenPart_GameStartDialog">
                     <def>GameStartDialog</def>
-                    <text>You slipped out of Castle Volkihar while the Lord fed. Your thralls carried what they could, and you ran until the sky started to grey.\n\nThe sun will burn you, so get a roof up before morning. Feed on sleepers and prisoners, not on your own, and watch the dark. The clan does not forget a betrayal.</text>
+                    <text>You slipped out of Castle Volkihar while the Lord fed. Your thralls carried what they could, and you ran until the sky started to gray.\n\nThe sun will burn you, so get a roof up before morning. Feed on sleepers and prisoners, not on your own, and watch the dark. The clan does not forget a betrayal.</text>
                     <closeSound>GameStartSting</closeSound>
                 </li>
             </parts>

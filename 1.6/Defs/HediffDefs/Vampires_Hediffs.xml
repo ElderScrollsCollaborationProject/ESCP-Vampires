@@ -72,6 +72,7 @@
                 <label>fed</label>
                 <statOffsets>
                     <ToxicResistance>0.25</ToxicResistance>
+                    <Mashed_Bloodmoon_LycanthropyResistance MayRequire="SirMashedPotato.Bloodmoon">1</Mashed_Bloodmoon_LycanthropyResistance>
                 </statOffsets>
             </li>
             <li>
@@ -81,6 +82,7 @@
                     <ToxicResistance>0.5</ToxicResistance>
                     <MeleeDodgeChance>4</MeleeDodgeChance>
                     <MoveSpeed>0.3</MoveSpeed>
+                    <Mashed_Bloodmoon_LycanthropyResistance MayRequire="SirMashedPotato.Bloodmoon">1</Mashed_Bloodmoon_LycanthropyResistance>
                 </statOffsets>
             </li>
             <li>
@@ -92,6 +94,7 @@
                     <MeleeDodgeChance>8</MeleeDodgeChance>
                     <MoveSpeed>0.6</MoveSpeed>
                     <SocialImpact>-0.25</SocialImpact>
+                    <Mashed_Bloodmoon_LycanthropyResistance MayRequire="SirMashedPotato.Bloodmoon">1</Mashed_Bloodmoon_LycanthropyResistance>
                 </statOffsets>
             </li>
             <li>
@@ -103,6 +106,7 @@
                     <MeleeDodgeChance>14</MeleeDodgeChance>
                     <MoveSpeed>1</MoveSpeed>
                     <SocialImpact>-0.5</SocialImpact>
+                    <Mashed_Bloodmoon_LycanthropyResistance MayRequire="SirMashedPotato.Bloodmoon">1</Mashed_Bloodmoon_LycanthropyResistance>
                 </statOffsets>
                 <painFactor>0.5</painFactor>
             </li>

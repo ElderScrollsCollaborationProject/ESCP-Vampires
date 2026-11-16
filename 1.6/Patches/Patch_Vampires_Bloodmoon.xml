@@ -5,21 +5,11 @@
         <mods>
             <li>Mashed's Bloodmoon</li>
         </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/HediffDef[defName="ESCP_Hediff_Vampirism"]/stages/li/statOffsets</xpath>
-                    <value>
-                        <Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/HediffDef[defName="Mashed_Bloodmoon_Lycanthrope"]/stages/li/makeImmuneTo</xpath>
-                    <value>
-                        <li>ESCP_Hediff_SanguinareVampiris</li>
-                    </value>
-                </li>
-            </operations>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/HediffDef[defName="Mashed_Bloodmoon_Lycanthrope"]/stages/li/makeImmuneTo</xpath>
+            <value>
+                <li>ESCP_Hediff_SanguinareVampiris</li>
+            </value>
         </match>
     </Operation>
 
